@@ -4,7 +4,8 @@ const options = {
   text: "Message from slack bot!!",
 };
 
-axios.post('<SLACK_WEBHOOK_URL>', JSON.stringify(options))
+slack = "T06L0LNHA58/B06LX4U4J4B/alSW0feBStQwRsjT1pFrKJ1j"
+axios.post('https://hooks.slack.com/services/ + slack', JSON.stringify(options))
 .then((response) => {
   console.log('SUCCEEDED: Sent slack webhook: \n', response.data);
   resolve(response.data);
